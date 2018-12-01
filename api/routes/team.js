@@ -17,7 +17,7 @@ module.exports = function(router) {
     });
 
     // POST: Get new meeting note document
-    router.post('/teamMember', (req, res) => {
+    router.post('/team', (req, res) => {
         let member = new TeamMember(req.body);
         member.save((err, note) => {
             if(err) {
