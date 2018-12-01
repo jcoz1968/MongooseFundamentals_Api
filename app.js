@@ -18,12 +18,12 @@ app.use(express.static('static'));
 app.use(morgan('dev'));
 
 app.use(function (req, res) {
-	const err = new Error('Not Found');
-	err.status = 404;
-	res.json(err);
+    const err = new Error('Not Found');
+    err.status = 404;
+    res.json(err);
 });
 
 // Add MongoDB connection in later... first just run app.listen (below)
 app.listen(app.get('port'), function () {
-	console.log('API Server Listening on port ' + app.get('port') + '!');
+    console.log('API Server Listening on port ' + app.get('port') + '!');
 });
